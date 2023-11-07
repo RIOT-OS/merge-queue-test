@@ -3,7 +3,7 @@ on:
   merge_group:
 
 jobs:
-  mqjob:
+  new_mqjob:
     runs-on: ubuntu-latest
     steps:
       - name: test
