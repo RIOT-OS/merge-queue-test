@@ -1,3 +1,3 @@
 # merge-queue-test
 
-## added from test branch
+This repository is used for experimentation with github merge queues.
