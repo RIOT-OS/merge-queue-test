@@ -8,3 +8,5 @@ jobs:
     steps:
       - name: test
         run: echo "Hello from pr job!"
+      - name: delay
+        run: sleep 90
