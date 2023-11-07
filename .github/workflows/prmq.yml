@@ -1,0 +1,11 @@
+name: PR and MQ jobs
+on:
+  pull_request:
+  merge_group:
+
+jobs:
+  bothjob:
+    runs-on: ubuntu-latest
+    steps:
+      - name: test
+        run: echo "Hello from pr &mq job!"

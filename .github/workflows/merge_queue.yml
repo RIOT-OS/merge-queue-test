@@ -1,9 +1,9 @@
-name: PR jobs
+name: MQ jobs
 on:
   merge_group:
 
 jobs:
-  prjob:
+  mqjob:
     runs-on: ubuntu-latest
     steps:
       - name: test
