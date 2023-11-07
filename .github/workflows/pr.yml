@@ -10,7 +10,7 @@ jobs:
       - name: test
         run: echo ${{ github.event }}
       - name: fail
-        if: ${{github.event == "merge_group" }}
+        if: github.event == merge_group
         run: "false"
       - name: sleep
         run: sleep 60
