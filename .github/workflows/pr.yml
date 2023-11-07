@@ -1,0 +1,10 @@
+name: hello-world
+on:
+  pull_request:
+  merge_group:
+jobs:
+  hellojob:
+    runs-on: ubuntu-latest
+    steps:
+      - name: test
+        run: echo "Hello World!"
