@@ -1,9 +1,9 @@
-name: PR jobs
+name: New PR jobs
 on:
   pull_request:
 
 jobs:
-  prjob:
+  newprjob:
     runs-on: ubuntu-latest
     steps:
       - name: sleep
