@@ -3,7 +3,7 @@ on:
   merge_group:
 
 jobs:
-  prjob:
+  mock-full-test:
     runs-on: ubuntu-latest
     steps:
       - name: sleep
