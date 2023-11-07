@@ -7,10 +7,10 @@ jobs:
   prjob:
     runs-on: ubuntu-latest
     steps:
+      - name: test
+        run: echo ${{ github.event }}
+      - name: fail
+        if: ${{github.event == "merge_group" }}
+        run: "false"
       - name: sleep
         run: sleep 60
-      - name: test
-        run: echo ${{github.event}}
-      - name: fail
-        if: ${{github.event == "merge_group"
-        run: "false"
