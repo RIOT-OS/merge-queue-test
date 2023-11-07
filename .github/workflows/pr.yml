@@ -1,6 +1,6 @@
 name: PR jobs
 on:
-  merge_group:
+  pull_request:
 
 jobs:
   prjob:
