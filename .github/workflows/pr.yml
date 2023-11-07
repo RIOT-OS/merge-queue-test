@@ -12,5 +12,8 @@ jobs:
       - name: fail
         if: github.event == 'merge_group'
         run: "false"
+      - name: fail2
+        if: github.event != 'merge_group'
+        run: "false"
       - name: sleep
         run: sleep 60
