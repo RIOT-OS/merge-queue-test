@@ -9,3 +9,4 @@ jobs:
       - name: sleep
         run: sleep 60
       - name: test
+        run: echo "All quick tests passed!"
