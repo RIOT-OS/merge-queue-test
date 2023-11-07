@@ -3,10 +3,10 @@ on:
   merge_group:
 
 jobs:
-  mqjob:
+  new_mqjob:
     runs-on: ubuntu-latest
     steps:
       - name: test
-        run: echo "Hello from pr job!"
+        run: echo "Hello from merge_group job!"
       - name: delay
         run: sleep 90
