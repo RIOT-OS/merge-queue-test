@@ -1,0 +1,22 @@
+name: static-tests
+
+on:
+  push:
+    branches:
+      - master
+      - staging
+      - trying
+    tags:
+      - '[0-9][0-9][0-9][0-9].[0-9][0-9]-RC[0-9]*'
+      - '[0-9][0-9][0-9][0-9].[0-9][0-9]'
+      - '[0-9][0-9][0-9][0-9].[0-9][0-9].*'
+  pull_request:
+    branches:
+      - '*'
+
+jobs:
+  static-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - name: test
+        run: echo "All static checks passed!"

@@ -1,0 +1,18 @@
+name: tools-test
+
+on:
+  push:
+    branches:
+      - master
+    tags:
+      - '*'
+  pull_request:
+    branches:
+      - '*'
+
+jobs:
+  python-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - name: test
+        run: echo "All tools-test passed!"

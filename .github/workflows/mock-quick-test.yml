@@ -1,4 +1,4 @@
-name: PR jobs
+name: Full test mock
 on:
   pull_request:
 
@@ -9,6 +9,10 @@ jobs:
       - name: sleep
         run: sleep 60
       - name: test
+<<<<<<< HEAD:.github/workflows/pr.yml
         run: echo "Hello from pr job!"
       - name: delay
         run: sleep 90
+=======
+        run: echo "All quick tests passed!"
+>>>>>>> 5210eaa (initial workflow setup):.github/workflows/mock-quick-test.yml
