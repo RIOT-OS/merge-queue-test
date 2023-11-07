@@ -12,4 +12,4 @@ jobs:
         check: [commit-msg, pr_check]
     steps:
       - name: test
-        run: echo "All ${{ matrix.check }} passed!"
+        run: echo ${{ matrix.check }}
