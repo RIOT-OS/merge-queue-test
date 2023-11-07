@@ -1,6 +1,7 @@
 name: PR jobs
 on:
   pull_request:
+  merge_group:
 
 jobs:
   prjob:
@@ -9,6 +10,7 @@ jobs:
       - name: sleep
         run: sleep 60
       - name: test
-        run: echo "Hello from pr job!"
+        run: echo ${{github.event}}
       - name: fail
+        if: ${{github.event == "merge_group"
         run: "false"
