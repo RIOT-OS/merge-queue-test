@@ -1,4 +1,4 @@
-name: Full test mock
+name: quick test mock
 on:
   pull_request:
 
