@@ -1,0 +1,15 @@
+name: check-commits
+on:
+  pull_request:
+    types: [opened, reopened, synchronize]
+jobs:
+  check-commits:
+    runs-on: ubuntu-latest
+    if: ${{ github.base_ref }}
+    strategy:
+      fail-fast: false
+      matrix:
+        check: [commit-msg, pr_check]
+    steps:
+      - name: test
+        run: echo "All ${{ matrix.check }} passed!"

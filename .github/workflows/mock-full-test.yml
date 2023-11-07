@@ -1,0 +1,12 @@
+name: Full test mock
+on:
+  merge_group:
+
+jobs:
+  prjob:
+    runs-on: ubuntu-latest
+    steps:
+      - name: sleep
+        run: sleep 90
+      - name: test
+        run: echo "All full tests passed!"
