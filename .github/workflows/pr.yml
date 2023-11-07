@@ -10,10 +10,10 @@ jobs:
       - name: test
         run: echo ${{ github.event }}
       - name: fail
-        if: github.event == 'merge_group'
+        if: github.event_name == 'merge_group'
         run: "false"
       - name: fail2
-        if: github.event == 'pull_request'
+        if: github.event_name == 'pull_request'
         run: "false"
       - name: fail anyways
         run: "false"
