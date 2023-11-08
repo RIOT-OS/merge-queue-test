@@ -8,14 +8,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: test
-        run: echo ${{ github.event }}
+        run: "true"
+
+  failing_pr_job:
+    runs-on: ubuntu-latest
+    steps:
       - name: fail
         if: github.event_name == 'merge_group'
-        run: "false"
+        run: "true"
       - name: fail2
         if: github.event_name == 'pull_request'
         run: "false"
-      - name: fail anyways
-        run: "false"
-      - name: sleep
-        run: sleep 60
+      - name: failalways
+        run: "true"
