@@ -7,17 +7,11 @@ jobs:
   prjob:
     runs-on: ubuntu-latest
     steps:
-      - name: test
-        run: "true"
-
-  failing_pr_job:
-    runs-on: ubuntu-latest
-    steps:
-      - name: fail
-        if: github.event_name == 'merge_group'
-        run: "true"
-      - name: fail2
+      - name: sleep
+        run: sleep 90
+      - name: PR status
         if: github.event_name == 'pull_request'
-        run: "false"
-      - name: failalways
+        run: "true"
+      - name: Merge group status
+        if: github.event_name == 'merge_group'
         run: "true"
